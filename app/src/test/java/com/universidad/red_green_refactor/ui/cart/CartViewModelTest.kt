@@ -78,4 +78,10 @@ class CartViewModelTest {
             cancelAndIgnoreRemainingEvents()
         }
     }
+
+    @Test
+    fun `calculateTotal returns 0 for empty list`() {
+        val total = viewModel.calculateTotal(emptyList())
+        assertEquals(0.0, total, 0.001)
+    }
 }
